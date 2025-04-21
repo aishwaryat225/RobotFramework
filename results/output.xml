@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.7 on darwin)" generated="2025-04-21T21:33:12.234729" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon" source="/Users/aishwarya/Documents/RobotFramework/Robot_framework/tests/Amazon.robot">
+<test id="s1-t1" name="User can search for products" line="20">
+<kw name="Initialize Test" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-21T21:33:12.351158" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-21T21:33:12.351055" elapsed="4.591955"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-21T21:33:16.944401" elapsed="0.336522"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-04-21T21:33:22.678001" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-21T21:33:22.678205" level="FAIL">Text 'Shop by' did not appear in 5 seconds.</msg>
+<arg>Shop by</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-04-21T21:33:17.281084" elapsed="5.399419">Text 'Shop by' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-04-21T21:33:12.350734" elapsed="10.329908">Text 'Shop by' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Cleanup Test" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-21T21:33:22.681130" elapsed="0.080387"/>
+</kw>
+<status status="PASS" start="2025-04-21T21:33:22.680929" elapsed="0.080727"/>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tag>Smoke</tag>
+<status status="FAIL" start="2025-04-21T21:33:12.350376" elapsed="10.411386">Setup failed:
+Text 'Shop by' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t2" name="User can view a product" line="26">
+<kw name="Initialize Test" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-21T21:33:22.762466" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-21T21:33:22.762344" elapsed="1.585333"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-21T21:33:24.348993" elapsed="0.338948"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-04-21T21:33:29.945903" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-21T21:33:29.946026" level="FAIL">Text 'Shop by' did not appear in 5 seconds.</msg>
+<arg>Shop by</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-04-21T21:33:24.688175" elapsed="5.258119">Text 'Shop by' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-04-21T21:33:22.762210" elapsed="7.184186">Text 'Shop by' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Cleanup Test" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-21T21:33:29.946749" elapsed="0.070645"/>
+</kw>
+<status status="PASS" start="2025-04-21T21:33:29.946616" elapsed="0.070851"/>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tag>Smoke</tag>
+<status status="FAIL" start="2025-04-21T21:33:22.761981" elapsed="7.255549">Setup failed:
+Text 'Shop by' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t3" name="User can add product to cart" line="33">
+<kw name="Initialize Test" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-21T21:33:30.018177" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-21T21:33:30.018053" elapsed="1.519864"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-21T21:33:31.538832" elapsed="0.344243"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-04-21T21:33:37.136930" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-21T21:33:37.137044" level="FAIL">Text 'Shop by' did not appear in 5 seconds.</msg>
+<arg>Shop by</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-04-21T21:33:31.883294" elapsed="5.254028">Text 'Shop by' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-04-21T21:33:30.017917" elapsed="7.119493">Text 'Shop by' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Cleanup Test" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-21T21:33:37.137765" elapsed="0.073775"/>
+</kw>
+<status status="PASS" start="2025-04-21T21:33:37.137620" elapsed="0.073990"/>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tag>Smoke</tag>
+<status status="FAIL" start="2025-04-21T21:33:30.017711" elapsed="7.193957">Setup failed:
+Text 'Shop by' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t4" name="User must sign in to check out" line="41">
+<kw name="Initialize Test" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-21T21:33:37.212306" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-21T21:33:37.212193" elapsed="1.552146"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-21T21:33:38.764640" elapsed="0.336524"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-04-21T21:33:44.361315" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-21T21:33:44.361449" level="FAIL">Text 'Shop by' did not appear in 5 seconds.</msg>
+<arg>Shop by</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-04-21T21:33:39.101529" elapsed="5.260387">Text 'Shop by' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-04-21T21:33:37.212067" elapsed="7.149937">Text 'Shop by' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Cleanup Test" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-21T21:33:44.362370" elapsed="0.103140"/>
+</kw>
+<status status="PASS" start="2025-04-21T21:33:44.362222" elapsed="0.103360"/>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tag>sign-in</tag>
+<status status="FAIL" start="2025-04-21T21:33:37.211854" elapsed="7.253806">Setup failed:
+Text 'Shop by' did not appear in 5 seconds.</status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" start="2025-04-21T21:33:12.235248" elapsed="32.230752"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">sign-in</stat>
+<stat pass="0" fail="3" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat name="Amazon" id="s1" pass="0" fail="4" skip="0">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
