@@ -1,155 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.7 on darwin)" generated="2025-04-21T21:33:12.234729" rpa="false" schemaversion="5">
-<suite id="s1" name="Amazon" source="/Users/aishwarya/Documents/RobotFramework/Robot_framework/tests/Amazon.robot">
-<test id="s1-t1" name="User can search for products" line="20">
+<robot generator="Robot 7.2.2 (Python 3.12.7 on darwin)" generated="2025-04-21T22:12:54.016103" rpa="false" schemaversion="5">
+<suite id="s1" name="Crm" source="/Users/aishwarya/Documents/RobotFramework/RobotFramework/tests/Crm.robot">
+<test id="s1-t1" name="Should be able to add new customer" line="19">
 <kw name="Initialize Test" type="SETUP">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-04-21T22:12:54.103554" elapsed="0.000095"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-04-21T22:12:54.103705" elapsed="0.000068"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-21T21:33:12.351158" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'.</msg>
+<msg time="2025-04-21T22:12:54.103902" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-21T21:33:12.351055" elapsed="4.591955"/>
+<status status="PASS" start="2025-04-21T22:12:54.103827" elapsed="2.419108"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-21T21:33:16.944401" elapsed="0.336522"/>
+<kw name="Set Window Position" owner="SeleniumLibrary">
+<arg>x=341</arg>
+<arg>y=169</arg>
+<doc>Sets window position using ``x`` and ``y`` coordinates.</doc>
+<status status="PASS" start="2025-04-21T22:12:56.524442" elapsed="0.224580"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>width=1935</arg>
+<arg>height=1090</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-04-21T22:12:56.749740" elapsed="0.553905"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:12:57.733902" level="INFO">Current page contains text 'Customers Are Priority One'.</msg>
+<arg>Customers Are Priority One</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-21T22:12:57.304444" elapsed="0.429963"/>
+</kw>
+<status status="PASS" start="2025-04-21T22:12:54.103252" elapsed="3.631686"/>
+</kw>
+<kw name="Login To CRM">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:12:57.738514" level="INFO">Clicking link 'id=SignIn'.</msg>
+<arg>id=SignIn</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:12:57.737243" elapsed="0.860596"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:12:59.027717" level="INFO">Current page contains text 'Login'.</msg>
+<arg>Login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-21T22:12:58.598386" elapsed="0.429787"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:12:59.029865" level="INFO">Typing text 'admin@robotframeworktutorial.com' into text field 'id=email-id'.</msg>
+<arg>id=email-id</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:12:59.028934" elapsed="0.778800"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:12:59.809254" level="INFO">Typing text 'qwe' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:12:59.808392" elapsed="0.694661"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:00.504765" level="INFO">Clicking button 'id=submit-id'.</msg>
+<arg>id=submit-id</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:13:00.503917" elapsed="1.521134"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:02.491360" level="INFO">Current page contains text 'Our Happy Customers'.</msg>
+<arg>Our Happy Customers</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-21T22:13:02.025249" elapsed="0.466546"/>
+</kw>
+<status status="PASS" start="2025-04-21T22:12:57.736173" elapsed="4.756012"/>
+</kw>
+<kw name="Add New Customer">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:02.494557" level="INFO">Clicking link 'id=new-customer'.</msg>
+<arg>id=new-customer</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:13:02.493972" elapsed="0.993610"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:03.914791" level="INFO">Current page contains text 'Add Customer'.</msg>
+<arg>Add Customer</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-21T22:13:03.488281" elapsed="0.426965"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:03.916898" level="INFO">Typing text 'janedoe@gmail.com' into text field 'id=EmailAddress'.</msg>
+<arg>id=EmailAddress</arg>
+<arg>${NEW_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:13:03.915941" elapsed="0.695459"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:04.612813" level="INFO">Typing text 'Jane' into text field 'id=FirstName'.</msg>
+<arg>id=FirstName</arg>
+<arg>${FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:13:04.612052" elapsed="0.662628"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:05.275007" level="INFO">Typing text 'Doe' into text field 'id=LastName'.</msg>
+<arg>id=LastName</arg>
+<arg>${LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:13:05.274821" elapsed="0.647145"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:05.922527" level="INFO">Typing text 'Dallas' into text field 'id=City'.</msg>
+<arg>id=City</arg>
+<arg>${CITY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:13:05.922258" elapsed="0.684585"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:06.608711" level="INFO">Selecting options from selection list 'id=StateOrRegion' by value TX.</msg>
+<arg>id=StateOrRegion</arg>
+<arg>${STATE}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-04-21T22:13:06.607673" elapsed="1.722659"/>
+</kw>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:08.331627" level="INFO">Selecting 'female' from radio button 'gender'.</msg>
+<arg>gender</arg>
+<arg>female</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2025-04-21T22:13:08.331057" elapsed="0.679893"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:09.012547" level="INFO">Selecting checkbox 'name=promos-name'.</msg>
+<arg>name=promos-name</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:13:09.011730" elapsed="1.103010"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:10.115845" level="INFO">Clicking button 'Submit'.</msg>
+<arg>Submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:13:10.115299" elapsed="1.074270"/>
+</kw>
+<status status="PASS" start="2025-04-21T22:13:02.493046" elapsed="8.697110"/>
+</kw>
+<kw name="Verify Customer Added Successfully">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Success! New customer added.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-21T22:13:11.192141" elapsed="0.218592"/>
+</kw>
+<status status="PASS" start="2025-04-21T22:13:11.191181" elapsed="0.220066"/>
+</kw>
+<kw name="Sign Out">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-04-21T22:13:11.413891" level="INFO">Clicking link 'Sign Out'.</msg>
+<arg>Sign Out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-21T22:13:11.413313" elapsed="0.839762"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<msg time="2025-04-21T21:33:22.678001" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-04-21T21:33:22.678205" level="FAIL">Text 'Shop by' did not appear in 5 seconds.</msg>
-<arg>Shop by</arg>
+<arg>Signed Out</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="FAIL" start="2025-04-21T21:33:17.281084" elapsed="5.399419">Text 'Shop by' did not appear in 5 seconds.</status>
+<status status="PASS" start="2025-04-21T22:13:12.253313" elapsed="0.208758"/>
 </kw>
-<status status="FAIL" start="2025-04-21T21:33:12.350734" elapsed="10.329908">Text 'Shop by' did not appear in 5 seconds.</status>
+<status status="PASS" start="2025-04-21T22:13:11.412385" elapsed="1.050139"/>
 </kw>
 <kw name="Cleanup Test" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-21T21:33:22.681130" elapsed="0.080387"/>
+<status status="PASS" start="2025-04-21T22:13:12.464526" elapsed="0.294623"/>
 </kw>
-<status status="PASS" start="2025-04-21T21:33:22.680929" elapsed="0.080727"/>
+<status status="PASS" start="2025-04-21T22:13:12.463626" elapsed="0.295609"/>
 </kw>
 <doc>This is some basic info about the test</doc>
+<tag>1006</tag>
+<tag>Contacts</tag>
 <tag>Smoke</tag>
-<status status="FAIL" start="2025-04-21T21:33:12.350376" elapsed="10.411386">Setup failed:
-Text 'Shop by' did not appear in 5 seconds.</status>
-</test>
-<test id="s1-t2" name="User can view a product" line="26">
-<kw name="Initialize Test" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-21T21:33:22.762466" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-21T21:33:22.762344" elapsed="1.585333"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-21T21:33:24.348993" elapsed="0.338948"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<msg time="2025-04-21T21:33:29.945903" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-04-21T21:33:29.946026" level="FAIL">Text 'Shop by' did not appear in 5 seconds.</msg>
-<arg>Shop by</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="FAIL" start="2025-04-21T21:33:24.688175" elapsed="5.258119">Text 'Shop by' did not appear in 5 seconds.</status>
-</kw>
-<status status="FAIL" start="2025-04-21T21:33:22.762210" elapsed="7.184186">Text 'Shop by' did not appear in 5 seconds.</status>
-</kw>
-<kw name="Cleanup Test" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-21T21:33:29.946749" elapsed="0.070645"/>
-</kw>
-<status status="PASS" start="2025-04-21T21:33:29.946616" elapsed="0.070851"/>
-</kw>
-<doc>This is some basic info about the test</doc>
-<tag>Smoke</tag>
-<status status="FAIL" start="2025-04-21T21:33:22.761981" elapsed="7.255549">Setup failed:
-Text 'Shop by' did not appear in 5 seconds.</status>
-</test>
-<test id="s1-t3" name="User can add product to cart" line="33">
-<kw name="Initialize Test" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-21T21:33:30.018177" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-21T21:33:30.018053" elapsed="1.519864"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-21T21:33:31.538832" elapsed="0.344243"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<msg time="2025-04-21T21:33:37.136930" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-04-21T21:33:37.137044" level="FAIL">Text 'Shop by' did not appear in 5 seconds.</msg>
-<arg>Shop by</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="FAIL" start="2025-04-21T21:33:31.883294" elapsed="5.254028">Text 'Shop by' did not appear in 5 seconds.</status>
-</kw>
-<status status="FAIL" start="2025-04-21T21:33:30.017917" elapsed="7.119493">Text 'Shop by' did not appear in 5 seconds.</status>
-</kw>
-<kw name="Cleanup Test" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-21T21:33:37.137765" elapsed="0.073775"/>
-</kw>
-<status status="PASS" start="2025-04-21T21:33:37.137620" elapsed="0.073990"/>
-</kw>
-<doc>This is some basic info about the test</doc>
-<tag>Smoke</tag>
-<status status="FAIL" start="2025-04-21T21:33:30.017711" elapsed="7.193957">Setup failed:
-Text 'Shop by' did not appear in 5 seconds.</status>
-</test>
-<test id="s1-t4" name="User must sign in to check out" line="41">
-<kw name="Initialize Test" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-21T21:33:37.212306" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-21T21:33:37.212193" elapsed="1.552146"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-21T21:33:38.764640" elapsed="0.336524"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<msg time="2025-04-21T21:33:44.361315" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-04-21T21:33:44.361449" level="FAIL">Text 'Shop by' did not appear in 5 seconds.</msg>
-<arg>Shop by</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="FAIL" start="2025-04-21T21:33:39.101529" elapsed="5.260387">Text 'Shop by' did not appear in 5 seconds.</status>
-</kw>
-<status status="FAIL" start="2025-04-21T21:33:37.212067" elapsed="7.149937">Text 'Shop by' did not appear in 5 seconds.</status>
-</kw>
-<kw name="Cleanup Test" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-21T21:33:44.362370" elapsed="0.103140"/>
-</kw>
-<status status="PASS" start="2025-04-21T21:33:44.362222" elapsed="0.103360"/>
-</kw>
-<doc>This is some basic info about the test</doc>
-<tag>sign-in</tag>
-<status status="FAIL" start="2025-04-21T21:33:37.211854" elapsed="7.253806">Setup failed:
-Text 'Shop by' did not appear in 5 seconds.</status>
+<status status="PASS" start="2025-04-21T22:12:54.102906" elapsed="18.656397"/>
 </test>
 <doc>This is some basic info about the whole suite</doc>
-<status status="FAIL" start="2025-04-21T21:33:12.235248" elapsed="32.230752"/>
+<status status="PASS" start="2025-04-21T22:12:54.016650" elapsed="18.742968"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="4" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">sign-in</stat>
-<stat pass="0" fail="3" skip="0">Smoke</stat>
+<stat pass="1" fail="0" skip="0">1006</stat>
+<stat pass="1" fail="0" skip="0">Contacts</stat>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat name="Amazon" id="s1" pass="0" fail="4" skip="0">Amazon</stat>
+<stat name="Crm" id="s1" pass="1" fail="0" skip="0">Crm</stat>
 </suite>
 </statistics>
 <errors>
